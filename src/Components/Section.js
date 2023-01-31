@@ -10,7 +10,7 @@ const Section = (props) => {
         </div>;
         <div className="thumbnails">
           {moviesByCategories.images.map((thumbnails, index) => {
-            <div className="thumbnails">
+            <div className="thumbnail">
               {console.log(thumbnails)}
               <img src={thumbnails} alt="" />
             </div>;
