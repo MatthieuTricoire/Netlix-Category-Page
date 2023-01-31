@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import data from "./data/movies_rnexgr.json";
+import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section>
+        {data.map((moviesByCategories, index) => {
+          return (
+            <div className="category" key={index}>
+              <h2 key={index}>{moviesByCategories.category}</h2>
+            </div>
+          );
+          <div className="thumbnails">
+          moviesByCategories.images.map((thumbnails, index) => {
+            return (
+              <div className="thumbnails">
+                <img src="thumbnail" alt="" />
+              </div>
+            );
+          });
+          </div>
+        })}
+      </section>
     </div>
   );
 }
-
 export default App;
